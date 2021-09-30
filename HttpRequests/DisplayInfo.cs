@@ -28,7 +28,7 @@ namespace HttpRequests
                 $"Premiered: {tvMaze.Premiered}\n" +
                 $"Ended: {tvMaze.Ended}\n" +
                 $"Status: {tvMaze.Status}\n" +
-                $"Runtime: {tvMaze.AverageRuntime}\n" +
+                $"Runtime: {tvMaze.AverageRuntime} minutes \n" +
                 $"Summary: {tvMaze.Summary}\n" +
                 $"Network: {tvMaze.Network.Name}\n" +
                 $"Show Url: {tvMaze.Url}\n");
