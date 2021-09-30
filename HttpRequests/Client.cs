@@ -35,8 +35,9 @@ namespace HttpRequests
                 var response = await client.GetAsync(uri);
                 if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
-                    _logger.Information($"{tvMazeRootUrl} is unresponsive after {maxRetries}");
+                    _logger.Information($"{tvMazeRootUrl} is unresponsive after {maxRetries} tries");
                     var showLookUpTvMazeApi = new ShowLookupTvMazeApi();
+                    showLookUpTvMazeApi.Name = "";
                     return showLookUpTvMazeApi;
                 }
                 var responseString = await response.Content.ReadAsStringAsync();
