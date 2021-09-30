@@ -40,8 +40,6 @@ namespace HttpRequests
 
             IConfiguration config = configBuilder.Build();
 
-            //List<string> urlList = config.GetSection("ImdbIds:Ids").Get<List<string>>();
-
             var client = new Client(Log.Logger, factory);
             var displayInfo = new DisplayInfo(Log.Logger);
 
